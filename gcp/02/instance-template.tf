@@ -1,7 +1,7 @@
 # Google Compute Engine: Regional Instance Template
 resource "google_compute_region_instance_template" "myapp1" {
   name        = "${local.name}-myapp1-template"
-  description = "This template is used to create MyApp1 server instances."
+  description = "This template will be used during creation of managed instance groups"
   tags        = [tolist(google_compute_firewall.fw_ssh.target_tags)[0], tolist(google_compute_firewall.fw_http.target_tags)[0]]
   instance_description = "MyApp1 VM Instances"
   machine_type         = var.machine_type
