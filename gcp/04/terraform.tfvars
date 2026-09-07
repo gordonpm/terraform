@@ -1,0 +1,5 @@
+gcp_project     = "experiments-502900"
+gcp_region1     = "us-west1"
+machine_type    = "e2-micro"
+environment     = "dev"
+business_division = "gordy"
