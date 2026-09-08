@@ -1,5 +1,4 @@
 #!/bin/bash
-touch /tmp/startup_script_has_started
 set -x
 exec > /var/log/app1-install.log 2>&1
 sudo apt install -y telnet
