@@ -12,8 +12,8 @@ resource "google_compute_region_instance_template" "myapp1" {
   }
   # Create a new boot disk from an image
   disk {
-    #source_image      = "debian-cloud/debian-12"
-    source_image      = data.google_compute_image.my_image.self_link
+    source_image      = "debian-cloud/debian-13"
+    #source_image      = data.google_compute_image.my_image.self_link
     auto_delete       = true
     boot              = true
   }

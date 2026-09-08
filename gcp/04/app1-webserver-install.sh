@@ -1,4 +1,5 @@
 #!/bin/bash
+touch /tmp/startup_script_has_started
 set -x
 exec > /var/log/app1-install.log 2>&1
 sudo apt install -y telnet
@@ -7,5 +8,5 @@ sudo systemctl enable nginx
 sudo chmod -R 755 /var/www/html
 sudo mkdir -p /var/www/html/app1
 HOSTNAME=$(hostname)
-sudo echo "<!DOCTYPE html> <html> <body style='background-color:rgb(173, 216, 230);'> <h1>Welcome to GCP</h1> <p><strong>VM Hostname:</strong> $HOSTNAME</p> <p><strong>VM IP Address:</strong> $(hostname -I)</p> <p><strong>Application Version:</strong> V1</p> <p>Google Cloud Platform - Demos</p> </body></html>" | sudo tee /var/www/html/app1/index.html
-sudo echo "<!DOCTYPE html> <html> <body style='background-color:rgb(173, 216, 230);'> <h1>Welcome to GCP</h1> <p><strong>VM Hostname:</strong> $HOSTNAME</p> <p><strong>VM IP Address:</strong> $(hostname -I)</p> <p><strong>Application Version:</strong> V1</p> <p>Google Cloud Platform - Demos</p> </body></html>" | sudo tee /var/www/html/index.html
+sudo echo "<!DOCTYPE html> <html> <body style='background-color:rgb(250, 210, 210);'> <h1>Welcome to GCP</h1> <p><strong>VM Hostname:</strong> $HOSTNAME</p> <p><strong>VM IP Address:</strong> $(hostname -I)</p> <p><strong>Application Version:</strong> V1</p> <p>Google Cloud Platform - Demos</p> </body></html>" | sudo tee /var/www/html/app1/index.html
+sudo echo "<!DOCTYPE html> <html> <body style='background-color:rgb(250, 210, 210);'> <h1>Welcome to GCP</h1> <p><strong>VM Hostname:</strong> $HOSTNAME</p> <p><strong>VM IP Address:</strong> $(hostname -I)</p> <p><strong>Application Version:</strong> V1</p> <p>Google Cloud Platform - Demos</p> </body></html>" | sudo tee /var/www/html/index.html
